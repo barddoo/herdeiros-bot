@@ -12,7 +12,5 @@ client.on('message', async (msg) => {
   }
 });
 
-const str = await client.login(
-  'ODI5MTgxMDc5MjE4NDIxNzYw.YG0ZDg.Gk_z2pal_1Owhl0yIDR3vwNzZyY',
-);
+const str = await client.login(process.env['DISCORD_TOKEN']);
 console.log(str);
