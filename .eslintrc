@@ -6,13 +6,11 @@
     "prettier"
   ],
   "extends": [
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "rules": {
-    "no-console": 1,
-    "prettier/prettier": 2
+    "prettier/prettier": "error"
   },
   "env": {
     "node": true

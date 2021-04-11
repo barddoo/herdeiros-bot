@@ -1,6 +1,10 @@
 import { Client } from 'discord.js';
-
 import { config } from 'dotenv';
+import Greeting from './actions/Greeting';
+import Calendar from './actions/Calendar';
+import Envs from './env/Envs';
+
+const actions = [Calendar, Greeting];
 
 config({ debug: true });
 
@@ -17,5 +21,11 @@ client.on('message', async (msg) => {
   }
 });
 
-const str = await client.login(process.env['DISCORD_TOKEN']);
-console.log(str);
+(async () => {
+  const str = await client.login(Envs.discord.token);
+  console.log(str);
+
+  for (const action of actions) {
+    await new action(client).run();
+  }
+})();
