@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> Bot for my group of church friends' Discord server
+> Discord bot for my group of church friends' server 
 
 ### 🏠 [Homepage](https://github.com/barddoo/herdeiros-bot#readme)
 
